@@ -1,5 +1,0 @@
-<environment>
-  <use name=SimCalorimetry/CaloSimAlgos>
-  <bin file=CaloSimAlgosTest.cpp></bin>
-</environment>
-
