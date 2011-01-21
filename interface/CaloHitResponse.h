@@ -78,7 +78,7 @@ public:
   void addHit(const PCaloHit * hit, CaloSamples & frame) const;
 
   /// creates the signal corresponding to this hit
-  CaloSamples makeAnalogSignal(const PCaloHit & inputHit) const;
+  virtual CaloSamples makeAnalogSignal(const PCaloHit & inputHit) const;
 
   /// finds the amplitude contribution from this hit, applying
   /// photostatistics, if needed.  Results are in photoelectrons
