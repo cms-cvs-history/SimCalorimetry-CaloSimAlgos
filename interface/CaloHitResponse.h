@@ -94,7 +94,7 @@ public:
   int nSignals() const {return theAnalogSignalMap.size();}
 
   /// creates an empty signal for this DetId
-  CaloSamples makeBlankSignal(const DetId & detId) const;
+  virtual CaloSamples makeBlankSignal(const DetId & detId) const;
 
 
   /// time-of-flight, in ns, to get to this cell
