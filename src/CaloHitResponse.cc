@@ -102,16 +102,9 @@ void CaloHitResponse::add(const CaloSamples & signal)
   DetId id(signal.id());
   CaloSamples * oldSignal = findSignal(id);
   if (oldSignal == 0) {
-    theAnalogSignalMap[id] = signal;
+     theAnalogSignalMap[id] = signal;
   } else  {
-    // need a "+=" to CaloSamples
-    int sampleSize =  oldSignal->size();
-    assert(sampleSize == signal.size());
-    assert(signal.presamples() == oldSignal->presamples());
-
-    for(int i = 0; i < sampleSize; ++i) {
-      (*oldSignal)[i] += signal[i];
-    }
+    *oldSignal += signal;
   }
 }
 
